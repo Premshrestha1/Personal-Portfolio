@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'arvo', serif;
+}
+
+/* header */
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+nav-link {
+    font-size: 1.2rem;
+}
+header img{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+/* home */
+/* custom.css */
+#home {
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Adjust as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; /* Ensures text is visible on a dark background */
+    text-align: center;
+    padding: 20px; /* Adjust as needed */
+   
+}
+
+#home{
+    width: 100%;
+    min-height: 100vh;
+}
+#particles-js{
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    top: 80;
+    left: 0;
+ background: #527cec;
+
+}
+#name{
+    margin-top: 16rem;
+    font-size: 4rem;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-weight: bold;
+}
+#tagline{
+margin-top: 1rem;
+font-size: 2rem;
+color: rgb(0, 0, 0);
+text-align: center;
+}
+#learn-more{
+padding: .4rem 1rem; 
+max-width: 10rem;
+margin: 0 auto;
+display: block;
+border: 2px solid rgb(0, 0, 0);  
+border-radius: 1rem;
+color: #fff;
+text-decoration: none;
+text-align: centers;
+}
+#learn-more:hover{
+    text-decoration: none;
+
+}
+/* resume */
+#resume{
+    width: 100%;
+    height: auto;
+    padding: 3rem 0;
+}
+#resume .card{
+  margin-left: auto;
+  margin-right: auto;  
+}
+/* portfplio */
+#portfolio{
+    width: 100%;
+    height: auto;
+    padding: 4rem 0;
+}
+#portfolio img{
+    margin-top: 30px;
+    width: 100%;
+    height: 220px;
+}
+#portfolio .grid{
+    position: relative;
+    width: 100%;
+}
+#portfolio .grid .overlay{
+    position: absolute;
+    margin-top: 30px;
+    top: 0;
+    bottom: 0;left: 0;right: 0;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background: #0043fd;
+}
+#portfolio .grid:hover .overlay{
+    opacity: 1;
+}
+.text{
+    color: #fff;
+    font-size: 1.7rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+#contact{
+    width: 100%;
+    height: auto;
+    padding: 4rem 0;
+}
