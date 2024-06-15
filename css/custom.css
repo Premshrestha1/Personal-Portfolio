@@ -25,7 +25,7 @@ header img{
 /* home */
 /* custom.css */
 #home {
-    background-image: url('../img/background.jpg');
+    background-image: url('../img/original.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh; /* Adjust as needed */
@@ -54,14 +54,14 @@ header img{
 #name{
     margin-top: 16rem;
     font-size: 4rem;
-    color: rgb(0, 0, 0);
+    color: whitesmoke;
     text-align: center;
     font-weight: bold;
 }
 #tagline{
 margin-top: 1rem;
 font-size: 2rem;
-color: rgb(0, 0, 0);
+color: whitesmoke;
 text-align: center;
 }
 #learn-more{
@@ -69,11 +69,11 @@ padding: .4rem 1rem;
 max-width: 10rem;
 margin: 0 auto;
 display: block;
-border: 2px solid rgb(0, 0, 0);  
+border: 2px solid rgb(21, 13, 255);  
 border-radius: 1rem;
-color: #fff;
+color:whitesmoke;
 text-decoration: none;
-text-align: centers;
+text-align: center;
 }
 #learn-more:hover{
     text-decoration: none;
@@ -85,10 +85,87 @@ text-align: centers;
     height: auto;
     padding: 3rem 0;
 }
+#resume .cv{
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    
+
+}
+#resume .cv img{
+    padding: 20px;
+}
 #resume .card{
   margin-left: auto;
   margin-right: auto;  
 }
+/* skills */
+#skills{
+ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:whitesmoke;
+ 
+   
+}
+.skills{
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    justify-content: center;
+}
+
+.skill-name{
+    font-size: 18px;
+    color:#000;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+.skill-bar
+{
+    height: 14px;
+    background: #282828; 
+    border-radius: 3px;
+}
+.skill-per{
+    height: 14px;
+    background: #d13639;
+    border-radius: 3px;
+    position: relative;
+    animation: fillBars 2s;
+}
+.skill-per::before{
+    content: attr(per);
+    position: absolute;
+    padding: 4px 6px;
+    background: #f1f1f1;
+    border-radius: 4px;
+    font-size: 12px;
+    top: -35px;
+    right: 0;
+    transform: translateX(50%);
+}
+.skill-per::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: whitesmoke;
+    top: -20px;
+    right: 0;
+    transform: translateX(50%)rotate(45deg);
+    border-radius: 2px;
+}
+@ketframes fillBars{
+    form{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+
 /* portfplio */
 #portfolio{
     width: 100%;
