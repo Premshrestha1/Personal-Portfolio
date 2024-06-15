@@ -12,6 +12,7 @@ body {
     font-size: 1.5rem;
 }
 
+
 nav-link {
     font-size: 1.2rem;
 }
@@ -129,4 +130,78 @@ text-align: centers;
     width: 100%;
     height: auto;
     padding: 4rem 0;
+}
+#contact form
+{
+width: 100%;
+}
+#contact form input , 
+#contact form textarea{
+    background-color: #e8edfc;
+}
+#contact form .submit-message{
+    margin-left: 15px;
+    margin-right: 15px;
+    background-color: #527cec;
+    color: #fff;
+
+}
+/* footer */
+footer{
+    width: 100%;
+    height: auto;
+    background: #e8edfc;
+    padding: 2rem 0 4rem;
+    /* border: 4px solid;
+    border-radius: 10px; */
+}
+footer ul{
+    list-style: none;
+    padding: 0;
+
+}
+footer .back-to-top{
+display: block;
+width: 100%;
+text-align: center;
+text-decoration: none;
+color: #333;
+
+}
+footer .back-to-top:hover{
+    text-decoration: none;
+    color: #527cec;
+}
+footer ul#social{
+
+    list-style: none;
+    padding-left: 0;
+    text-align: right;
+}
+footer ul#social li{
+    display: inline-block;
+    margin: left 1rem; ;
+}
+footer ul#social a{
+    text-decoration: none;
+  
+    font-size: 2rem;
+
+}
+footer ul #social a:hover{
+    text-decoration: none;
+    color: #527cec;
+}
+footer a,
+footer p{
+    color: #333;
+}
+footer .design{
+    text-align: left;
+}
+footer  a:hover{
+    color:#527cec ;
+}
+footer p {
+    text-align: right;
 }
