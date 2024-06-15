@@ -25,7 +25,8 @@ header img{
 /* home */
 /* custom.css */
 #home {
-    background-image: url('../img/original.jpg');
+    background-image: url(../img/original.jpg);
+    /* background-image: url('../img/original.jpg'); */
     background-size: cover;
     background-position: center;
     height: 100vh; /* Adjust as needed */
