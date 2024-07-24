@@ -13,8 +13,9 @@
     <link rel="icon" type="image/png" href="img/prem.png">
 </head>
 
-<body>
+<body id="body">
     <!-- navbar -->
+     <div id="loader"></div>
     <header>
 
         <nav class="navbar navbar-expand-lg navbar-light  bg-light fixed=top py-3 ">
@@ -189,8 +190,13 @@
                     Say hi to me !! 
                 </h2>
             </div>
-            <form action="https://formspree.io/mailme.stha393939@gmail.com" method="POST">
+            <form action="https://api.web3forms.com/submit" method="POST">
             <div class="row py-4">
+                <input type="hidden" name="access_key" value="95368ede-b1e2-4d15-9be9-34c519a2604b">
+    
+            <input type="hidden" name="redirect" value="contact-thankyou-page">
+    
+            <input type="hidden" name="subject" value="Hey Prem New feedback for your website">
 
                 
                     <div class="form-group col-md-6 wow fadeIn">
@@ -225,6 +231,7 @@
             </form>
         </div>
     </section>
+    
     <!-- footer -->
     <footer>
 <div class="container">
@@ -280,7 +287,26 @@
             $(this).addClass('active');
         })
     </script>
-    
+    <script>
+        window.onload = function() {
+            // Hide the loader and show the body content when the page is fully loaded
+            document.getElementById('loader').style.display = "none";
+            document.getElementById('body').style.display = "block";
+        };
+
+        // Function to load the content of loader.html into the loader element
+        function loadLoaderContent() {
+            fetch('loader.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('loader').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading loader content:', error));
+        }
+
+        // Call the function to load the loader content
+        loadLoaderContent();
+    </script>
 </body>
 
 </html>
