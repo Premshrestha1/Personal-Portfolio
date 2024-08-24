@@ -8,6 +8,43 @@ html
    
 }
 body {
+    display: none;
+}
+/* for dark mode */
+body.dark{
+    background-color: black;
+    color: white;
+}
+
+body.light{
+    background-color: white;
+    color: black;
+}
+body.dark footer {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+body.dark .skills {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+body.dark .skill-bar .skill-per {
+    background-color: #ffffff;
+}
+
+body.dark .contact-info ul li {
+    color: #ffffff;
+}
+
+body.dark .social-links a {
+    color: #ffffff;
+}
+
+
+/* body */
+body {
     margin: 0;
     padding: 0;
     font-family:  serif;
@@ -16,6 +53,11 @@ body {
     
    
 }
+/* .container{
+    box-shadow: 10px 10px 20px  #527cec , -10px -10px 20px  #527cec;
+    border-radius: 35px;
+
+} */
 li { list-style: none; }
 /* for scroll bar */
 ::-webkit-scrollbar{
@@ -63,7 +105,7 @@ header img{
     justify-content: center;
     color: white; /* Ensures text is visible on a dark background */
     text-align: center;
-    padding: 20px; /* Adjust as needed */
+    padding: 15px; /* Adjust as needed */
    
 }
 
@@ -92,6 +134,26 @@ h1{
     text-align: center;
     font-weight: bold;
 }
+/* typingng animation */
+h6{
+    font-size: 50px;
+    color: white;
+    text-shadow: 0 0 10px yellow;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+span{
+    color: yellow;
+    position: relative;
+    top: 0;
+    animation: colorful 6s infinite;
+}
+@keyframes colorful {
+100% {
+filter: hue-rotate(360deg);
+}
+}
+
 #tagline{
 margin-top: 1rem;
 font-size: 2rem;
@@ -146,7 +208,7 @@ text-align: center;
 .download:hover {
     background-color: #0056b3;
     color: #000;
-    bpr
+   
 }
 /* skills */
 #skills{
@@ -344,7 +406,42 @@ footer  a:hover{
 footer p {
     text-align: right;
 }
+/* responsive */
+@media (max-width: 768px) {
+    footer .contact-info, footer .social-links {
+        text-align: center;
+    }
+
+    footer .social-links ul {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    footer .contact-info ul, footer .social-links ul {
+        display: block;
+        text-align: center;
+    }
+
+    footer .social-links ul {
+        gap: 5px;
+    }
+}
 /* Loader */
+
+   
+    #loader {
+        /* Add your loader styles here */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000; /* Or any background you prefer */
+        z-index: 9999;
+    }
+
+
 .loading {
     position: fixed;
     top: 0;
@@ -481,3 +578,51 @@ footer p {
       filter: blur(4px);
     }
   }
+  /* for backgroundanmation */
+  .bgAnimation{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(20,1fr);
+    grid-template-rows: repeat(20,1fr);
+    background: #1d1d1d;
+    filter: saturate(2);
+    overflow: hidden;
+}
+
+.colorBox{
+    z-index: 2;
+    filter: brightness(1.1);
+    transition: 2s ease;
+    position: relative;
+    margin: 2px;
+    background: #1d1d1d;
+}
+
+.colorBox:hover{
+    background: #00bfff;
+    transition-duration: 0s;
+}
+
+.backgroundAmim{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: #00bfff;
+    filter: blur(60px);
+    animation: animBack 6s linear infinite;
+}
+
+@keyframes animBack {
+    0%{
+        top: -60px;
+    }
+    100%{
+        top: 120%;
+    }
+}

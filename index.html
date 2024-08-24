@@ -4,13 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prem Shrestha's personal portfolio website showcasing skills, resume, and contact information.">
+<meta name="keywords" content="Prem Shrestha, Web Developer, Portfolio, Resume, Contact">
+<meta name="author" content="Prem Shrestha">
+
     <link rel="stylesheet" href="library/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="library/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/custom.css">
+    <!-- animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Prem Shrestha </title>
     <link rel="icon" type="image/png" href="img/prem.png">
+   
     
 </head>
 
@@ -40,10 +47,15 @@
             </div>
         
      </div>
+     <div class="bgAnimation" id="bgAnimation">
+        <div class="backgroundAmim">
+            
+        </div>
+    </div>
     <header>
 
-        <nav class="navbar navbar-expand-lg navbar-light  bg-light fixed-top py-3 ">
-            <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light  bg-light fixed-top  " style="padding: 0.5px ;">
+            <div class="container-sm">
 
 
                 <a class="navbar-brand" href="#home" style="font-size: 30px;">
@@ -51,7 +63,7 @@
                     <i class="fa-brands fa-css3-alt d-inline-block align-text-top" width="32" height="32"></i>
                    <b> Prem</b>
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -73,6 +85,8 @@
                         </li>
                     </ul>
                     <a class="download" href="premstha.pdf" download="premcv.pdf" style="margin-left: 10px;">Download Cv</a>
+                    <button id="mode" aria-label="Toggle Dark Mode" style="border-radius: 25px; margin-left: 10px;">Turn On Dark Mode</button>
+
 
                 </div>
 
@@ -82,13 +96,14 @@
     </header>
     <!-- home -->
     <section id="home">
-        <div id="particles-js"></div>
-        <div class="container">
-            <div class="row">
+        <!-- <div id="particles-js"></div> -->
+        <div class="about" data-aos="fade-in" data-aos-duration="9000">
+            <div class="row refelct">
+                
                 <div class="col-md-12 justify-content-center">
-                    <h1 id="name" class="wow fadeIn">Prem Shrestha</h1>
-                    <p id="tagline" class="wow fadeIn">I'm Front-End Web developer and welcome to my Website.</p>
-                    <a href="#resume" id="learn-more" class="scroll-link wow fadeIn" ><i class="fa fa-angle-down"></i>Learn more</a>
+                    <h1 id="name" style="background-color: rgb(40, 40, 239);" >Prem Shrestha</h1>
+                    <h6 class="typing" id="tagline" >I'm &nbsp;<span class="auto-type">Front-End Web developer.</span></h6><br>
+                    <a href="#resume" id="learn-more" class="scroll-link "  ><i class="fa fa-angle-down"></i>Learn more</a>
                 </div>
             </div>
 
@@ -97,17 +112,17 @@
     <section id="resume">
         <div class="container pt-5">
             <div class="row">
-                <h2 class="title text-center w-100 wow slideInUp">Hi, I'm Prem Shrestha.
-                    <p class="about text-center w-75 mx-auto wow fadeIn">I love to do coding . When you code, you get this feeling
+                <h2 class="title text-center w-100" data-aos="fade-in" data-aos-duration="9000">Hi, I'm Prem Shrestha.
+                    <p class="about text-center w-75 mx-auto " data-aos="fade-in" data-aos-duration="9000">I love to do coding . When you code, you get this feeling
                         that you are helping
                         people. </p>
             </div>
             <div class="row">
                 <h2 class="title text-center w-100 wow fadeIn">And I LOVE</h2>
             </div>
-            <div class="row">
+            <div class="row" data-aos="fade-in" data-aos-duration="9000">
                 <div class="col-md-4 py-3">
-                    <div class="card wow fadeIn" style="max-width: 18rem;">
+                    <div class="card " style="max-width: 18rem;">
                         <img src="img/programming.jpg" class="card-img-top" alt="Programming">
                         <div class="card-body">
                             <h5 class="card-title">Programming</h5>
@@ -117,7 +132,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 py-3">
+                <div class="col-md-4 py-3" >
                     <div class="card wow fadeIn" style="max-width: 18rem;">
                         <img src="img/hacking.jpg" class="card-img-top" alt="Hacking">
                         <div class="card-body">
@@ -141,17 +156,17 @@
                     </div>
                 </div>
             </div>
-            <div class="container">
+            <div class="container" data-aos="fade-in" data-aos-duration="9000">
                 <div class="cv wow fadeIn">
                     <h2>Here is my <i class="fa-solid fa-file"></i> Curriculum Vitae...</h2>
                     <img src="img/premcv.png" alt="CV">
                     <br><br>
-                    <h6>Download CV from Here<a class="download" href="premstha.pdf" download="premcv.pdf" style="margin-left: 10px;">Download Cv</a></h6>
+                    <h5>Download CV from Here<a class="download" href="premstha.pdf" download="premcv.pdf" style="margin-left: 10px;">Download Cv</a></h5>
                 </div>
             </div>
-            </div>
+            
     </section>
-    <section id="skills">
+    <section id="skills" data-aos="fade-in" data-aos-duration="9000">
         <div class="skills wow fadeIn">
             <h2 style="text-align: center;">Skills I have learned!!</h2>
             <div class="skill">
@@ -180,7 +195,7 @@
             </div>
         </div>
     </section>
-    <section id="portfolio">
+    <section id="portfolio" data-aos="fade-in" data-aos-duration="9000">
         <div class="container py-2">
             <div class="row">
                 <h2 class="title text-center w-100 wow slideInUp">What I have done? <i class="fa-solid fa-check"></i></h2>
@@ -213,7 +228,7 @@
             </div>
         </div>
     </section>
-    <section id="contact">
+    <section id="contact" data-aos="fade-in" data-aos-duration="9000">
         <div class="container">
             <div class="row">
                 <h2 class="title text-center w-100 wow slideInUp">
@@ -252,7 +267,7 @@
 
                 <div class="form-group col-md-6 wow fadeIn ">
                         
-                    <ul class="contact-list" style="text-align: right;">
+                    <ul class="contact-list" style="text-align: left;">
 
                         <li class="contact-item">
         
@@ -314,9 +329,9 @@
     </section>
     
     <!-- footer -->
-    <footer>
-<div class="container">
-    <div class="row">
+    <footer >
+<div class="container"data-aos="fade-in" data-aos-duration="9000"  >
+    <div class="row" style="margin: 10px; padding: 10px;">
         <div class="col-md-5 wow fadeIn">
 <ul>
     
@@ -357,6 +372,7 @@
     <script type="text/javascript" src="js/particles.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <script src="https://kit.fontawesome.com/ba3578545e.js" crossorigin="anonymous"></script>
+    
     <!-- for animation -->
     <script type="text/javascript">
         new WOW().init();
@@ -371,15 +387,68 @@
     </script>
     <!-- for loader -->
     <script>
-         console.log("Script is running"); // Debugging statement
         window.addEventListener("load", function() {
-            console.log("Window loaded"); // Debugging statement
-            var loader = document.getElementById("loader");
-            var body = document.getElementById("body");
-            loader.style.display = "none";
-            body.style.display = "block";
+            setTimeout(function() {
+                var loader = document.getElementById("loader");
+                var body = document.getElementById("body");
+                loader.style.display = "none";
+                body.style.display = "block";
+            }, 2000); // 2-second delay for testing
         });
+
     </script>
+    <!-- animation -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- darkmode -->
+     <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    let modeBtn = document.querySelector("#mode");
+    let body = document.querySelector("body");
+
+    let currMode = "light";
+
+    modeBtn.addEventListener("click", () => {
+        if (currMode === "light") {
+            currMode = "dark";
+            body.classList.add("dark");
+            body.classList.remove("light");
+            modeBtn.textContent = "Turn On Light Mode";
+        } else {
+            currMode = "light";
+            body.classList.add("light");
+            body.classList.remove("dark");
+            modeBtn.textContent = "Turn On Dark Mode";
+        }
+        console.log(currMode);
+    });
+});
+     </script>
+
+<!-- for bg animation -->
+ <script>
+    const bgAnimation = document.getElementById('bgAnimation');
+
+const numberOfColorBoxes = 400;
+
+for (let i = 0; i < numberOfColorBoxes; i++) {
+    const colorBox = document.createElement('div');
+    colorBox.classList.add('colorBox');
+    bgAnimation.append(colorBox)
+}
+ </script>
+ <!-- for typing animation -->
+ <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    var typed = new Typed(".auto-type",{
+    strings : [ "Programmer", "Wordpress developer", "Programmer"],
+    typeSpeed : 100,
+    backSpeed : 100,
+    loop : true
+}); 
+  </script>
     
 </body>
 
