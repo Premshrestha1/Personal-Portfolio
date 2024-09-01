@@ -308,6 +308,27 @@ h6 {
     left: -4rem;
 } */
 
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+    .team {
+        padding: 10px; /* Reduces padding on smaller screens */
+    }
+
+    .photo {
+        width: 100%; /* Makes the photo container take full width on small screens */
+        margin-bottom: 20px; /* Maintains space below the photo */
+    }
+
+    .image img {
+        max-width: 150px; /* Reduces the maximum width of the image on small screens */
+    }
+
+    .icons a {
+        font-size: 20px; /* Reduces icon size on small screens */
+    }
+}
+
 /* Resume section */
 #resume {
     width: 100%;
@@ -410,47 +431,98 @@ h6 {
 }
 
 /* Portfolio section */
-#portfolio {
-    width: 100%;
-    padding: 4rem 0;
+.portfolio {
+    position: relative;
+    padding: 90px 0 60px 0;
+    background: #f2f2f2;
 }
 
-#portfolio img {
-    width: 100%;
-    height: auto;
-    margin-top: 30px;
+.portfolio .portfolio-item {
+    margin-bottom: 30px;
+    overflow: hidden;
 }
 
-#portfolio .grid {
+.portfolio .portfolio-item .portfolio-img {
+    position: relative;
+    background: #000000;
+    overflow: hidden;
+    
+}
+
+.portfolio .portfolio-item .link-preview,
+.portfolio .portfolio-item .link-details {
+    position: absolute;
+    display: inline-block;
+    padding: 5px 0;
+    line-height: 1;
+    text-align: center;
+    width: 45px;
+    height: 35px;
+    background: #4F84C4;
+    border: 1px solid #ffffff;
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.portfolio .portfolio-item .link-preview i,
+.portfolio .portfolio-item .link-details i {
+    font-size: 22px;
+    color: #ffffff;
+}
+
+.portfolio .portfolio-item .link-preview:hover,
+.portfolio .portfolio-item .link-details:hover {
+    background: #ffffff;
+    border: 1px solid #4F84C4;
+}
+
+.portfolio .portfolio-item .link-preview:hover i,
+.portfolio .portfolio-item .link-details:hover i {
+    color: #353535;
+}
+
+.portfolio .portfolio-item .link-preview {
+    left: 0;
+    top: calc(50% - 18px);
+}
+
+.portfolio .portfolio-item .link-details {
+    right: 0;
+    top: calc(50% - 18px);
+}
+
+.portfolio .portfolio-item:hover .link-preview {
+    opacity: 1;
+    left: calc(50% - 50px);
+}
+
+.portfolio .portfolio-item:hover .link-details {
+    opacity: 1;
+    right: calc(50% - 50px);
+}
+
+.portfolio .portfolio-item .portfolio-info {
     position: relative;
     width: 100%;
-}
-
-#portfolio .grid .overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background: #527cec;
-}
-
-#portfolio .grid:hover .overlay {
-    opacity: 1;
-}
-
-.text {
-    color: #fff;
-    font-size: 1.7rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    padding: 30px 15px;
     text-align: center;
+    background: #ffffff;
 }
+
+.portfolio .portfolio-item .portfolio-info h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.portfolio .portfolio-item .portfolio-info p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+
 
 /* Contact section */
 #contact {
