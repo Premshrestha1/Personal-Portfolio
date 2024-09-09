@@ -332,7 +332,7 @@ h6 {
 /* Resume section */
 #resume {
     width: 100%;
-    padding: 3rem 0;
+    padding: 0rem 0;
     text-align: center;
 }
 
@@ -562,7 +562,7 @@ footer {
 }
 
 footer ul {
-    text-align: center;
+    text-align: left;
 }
 
 footer .back-to-top {
