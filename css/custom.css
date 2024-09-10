@@ -334,6 +334,7 @@ h6 {
     width: 100%;
     padding: 0rem 0;
     text-align: center;
+    background-color: #f7f7f7;
 }
 
 #resume .cv img {
@@ -361,11 +362,13 @@ h6 {
 }
 
 /* Skills section */
+
+
 #skills {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: whitesmoke;
+    background-color:#f7f7f7;
     padding: 30px;
 }
 
@@ -433,101 +436,144 @@ h6 {
 /* Portfolio section */
 .portfolio {
     position: relative;
-    padding: 90px 0 60px 0;
-    background: #f2f2f2;
+    padding: 90px 0 0px 0;
+    background: #f7f7f7;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.section-header p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #666;
 }
 
 .portfolio .portfolio-item {
     margin-bottom: 30px;
-    overflow: hidden;
+    transition: all 0.3s ease;
 }
 
-.portfolio .portfolio-item .portfolio-img {
+.portfolio .portfolio-item:hover {
+    transform: translateY(-10px);
+}
+
+.portfolio .portfolio-img {
     position: relative;
-    background: #000000;
+    background: #000;
     overflow: hidden;
-    
+    border-radius: 5px;
 }
 
-.portfolio .portfolio-item .link-preview,
-.portfolio .portfolio-item .link-details {
-    position: absolute;
-    display: inline-block;
-    padding: 5px 0;
-    line-height: 1;
-    text-align: center;
-    width: 45px;
-    height: 35px;
-    background: #4F84C4;
-    border: 1px solid #ffffff;
-    transition: 0.3s;
-    opacity: 0;
-}
-
-.portfolio .portfolio-item .link-preview i,
-.portfolio .portfolio-item .link-details i {
-    font-size: 22px;
-    color: #ffffff;
-}
-
-.portfolio .portfolio-item .link-preview:hover,
-.portfolio .portfolio-item .link-details:hover {
-    background: #ffffff;
-    border: 1px solid #4F84C4;
-}
-
-.portfolio .portfolio-item .link-preview:hover i,
-.portfolio .portfolio-item .link-details:hover i {
-    color: #353535;
-}
-
-.portfolio .portfolio-item .link-preview {
-    left: 0;
-    top: calc(50% - 18px);
-}
-
-.portfolio .portfolio-item .link-details {
-    right: 0;
-    top: calc(50% - 18px);
-}
-
-.portfolio .portfolio-item:hover .link-preview {
-    opacity: 1;
-    left: calc(50% - 50px);
-}
-
-.portfolio .portfolio-item:hover .link-details {
-    opacity: 1;
-    right: calc(50% - 50px);
-}
-
-.portfolio .portfolio-item .portfolio-info {
-    position: relative;
+.portfolio .portfolio-img img {
     width: 100%;
-    padding: 30px 15px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.portfolio .portfolio-img .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio .portfolio-img .link-preview,
+.portfolio .portfolio-img .link-details {
+    position: relative;
+    margin: 0 10px;
+    padding: 10px;
+    background: #4F84C4;
+    border-radius: 50%;
     text-align: center;
-    background: #ffffff;
-}
-
-.portfolio .portfolio-item .portfolio-info h3 {
+    color: #fff;
     font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 10px;
+    line-height: 1;
+    transition: background 0.3s ease;
 }
 
-.portfolio .portfolio-item .portfolio-info p {
-    margin: 0;
-    font-size: 14px;
-    font-weight: 300;
-    text-transform: uppercase;
+.portfolio .portfolio-img .link-preview:hover,
+.portfolio .portfolio-img .link-details:hover {
+    background: #fff;
+    color: #4F84C4;
 }
+
+.portfolio .portfolio-item:hover .portfolio-img img {
+    transform: scale(1.1);
+}
+
+.portfolio .portfolio-item:hover .portfolio-img .overlay {
+    opacity: 1;
+}
+
+.portfolio .portfolio-info {
+    position: relative;
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio .portfolio-info h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.portfolio .portfolio-info p {
+    font-size: 14px;
+    color: #999;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .portfolio .portfolio-item {
+        margin-bottom: 20px;
+    }
+
+    .portfolio .portfolio-info h3 {
+        font-size: 18px;
+    }
+
+    .portfolio .portfolio-info p {
+        font-size: 12px;
+    }
+}
+
 
 
 
 /* Contact section */
+h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #333;
+}
 #contact {
     width: 100%;
     padding: 4rem 0;
+    background-color: #f7f7f7;
 }
 
 #contact form {
@@ -557,7 +603,7 @@ h6 {
 /* Footer */
 footer {
     width: 100%;
-    background: whitesmoke;
+    background:whitesmoke;
     padding: 2rem 0 4rem;
 }
 
