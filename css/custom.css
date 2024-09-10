@@ -186,14 +186,7 @@ header img {
     position: relative;
 }
 
-#particles-js {
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #527cec;
-}
+
 
 #name {
     font-size: 4rem;
@@ -241,7 +234,7 @@ h6 {
 /* photo  */
 
 
-/* .team .heading {
+.team .heading {
     color: #00bfff;
     font-size: 3em;
     font-weight: bold;
@@ -277,12 +270,13 @@ h6 {
 .team .row .card:hover {
     transform: translateY(-10px);
     cursor: pointer;
-} */
+}
 
 
 .team .row .photo .image {
     margin: 1rem 0;
     padding-top: 4rem;
+    z-index: 2;
    
 }
 
@@ -330,7 +324,7 @@ h6 {
 }
 
 
-/* .team .row .card .info h3 {
+.team .row .card .info h3 {
     font-size: 2rem;
     color: #333;
 }
@@ -394,10 +388,77 @@ h6 {
     background: #ccc;
     bottom: -3rem;
     left: -4rem;
-} */
+}
 
 
 /* Responsive Styles */
+/* Responsive Styles */
+@media (max-width: 767px) {
+    #name {
+        font-size: 3rem;
+    }
+
+    h6 {
+        font-size: 2rem;
+    }
+
+    #tagline {
+        font-size: 1.5rem;
+    }
+
+    .photo {
+        max-width: 200px;
+    }
+
+    .image img {
+        max-width: 150px;
+    }
+
+    .info .icons a {
+        font-size: 1.5rem;
+        margin: 0 5px;
+    }
+
+    #learn-more {
+        font-size: 0.9rem;
+        padding: 0.3rem 0.8rem;
+        max-width: 8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #name {
+        font-size: 2.5rem;
+    }
+
+    h6 {
+        font-size: 1.8rem;
+    }
+
+    #tagline {
+        font-size: 1.2rem;
+    }
+
+    .photo {
+        max-width: 150px;
+    }
+
+    .image img {
+        max-width: 120px;
+        max-height: 120px;
+    }
+
+    .info .icons a {
+        font-size: 1.2rem;
+        margin: 0 3px;
+    }
+
+    #learn-more {
+        font-size: 0.8rem;
+        padding: 0.2rem 0.6rem;
+        max-width: 6rem;
+    }
+}
 @media (max-width: 767px) {
     .team {
         padding: 10px; /* Reduces padding on smaller screens */
@@ -409,13 +470,15 @@ h6 {
     }
 
     .image img {
-        max-width: 150px; /* Reduces the maximum width of the image on small screens */
+        max-width: 150px;
+        max-height: 150px; /* Reduces the maximum width of the image on small screens */
     }
 
     .icons a {
         font-size: 20px; /* Reduces icon size on small screens */
     }
 }
+
 
 /* Resume section */
 #resume {
@@ -841,7 +904,9 @@ footer p {
     background: #1d1d1d;
     filter: saturate(2);
     overflow: hidden;
+    z-index: -1; 
 }
+
 
 .colorBox{
     z-index: 2;
@@ -866,6 +931,7 @@ footer p {
     background: #00bfff;
     filter: blur(60px);
     animation: animBack 6s linear infinite;
+    z-index: -1;
 }
 
 @keyframes animBack {
