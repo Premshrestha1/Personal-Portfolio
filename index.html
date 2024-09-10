@@ -178,8 +178,8 @@
                             <img src="img/programming.jpg" class="card-img-top" alt="Programming">
                             <div class="card-body">
                                 <h5 class="card-title">Programming</h5>
-                                <p class="card-text">Most good programmers do programming not because they expect to get
-                                    paid or get adulation by the public, but because it is fun to program.</p>
+                                <span class="card-text">Most good programmers do programming not because they expect to get
+                                    paid or get adulation by the public, but because it is fun to program.</span>
     
                             </div>
                         </div>
@@ -189,8 +189,8 @@
                             <img src="img/hacking.jpg" class="card-img-top" alt="Hacking">
                             <div class="card-body">
                                 <h5 class="card-title">Hacking</h5>
-                                <p class="card-text">Very smart people are often tricked by hackers, by phishing. I don't
-                                    exclude myself from that. It's about being smarter than a hacker.</p>
+                                <span class="card-text">Very smart people are often tricked by hackers, by phishing. I don't
+                                    exclude myself from that. It's about being smarter than a hacker.</span>
     
                             </div>
                         </div>
@@ -200,9 +200,9 @@
                             <img src="img/design.jpg" class="card-img-top" alt="Design">
                             <div class="card-body">
                                 <h5 class="card-title">Design</h5>
-                                <p class="card-text">Bad design is smoke, while good design is a mirror.
+                                <span class="card-text">Bad design is smoke, while good design is a mirror.
                                     <br><br><br><br>
-                                </p>
+                            </span>
     
                             </div>
                         </div>
@@ -214,7 +214,7 @@
                     <h2>Here is my <i class="fa-solid fa-file"></i> Curriculum Vitae...</h2>
                     <img src="img/premcv.png" alt="CV">
                     <br><br>
-                    <h5 style="margin-bottom: 0px;">Download CV from Here<a class="download" href="premstha.pdf" download="premcv.pdf" style="margin-left: 10px;">Download Cv</a></h5>
+                    <h4 style="margin-bottom: 0px;">Download CV from Here<a class="download" href="premstha.pdf" download="premcv.pdf" style="margin-left: 10px;">Download Cv</a></h4>
                 </div>
             </div>
             
@@ -484,7 +484,7 @@
     </script>
     <!-- darkmode -->
      <script>
-        document.addEventListener("DOMContentLoaded", () => {
+       document.addEventListener("DOMContentLoaded", () => {
     let modeBtn = document.querySelector("#mode");
     let body = document.querySelector("body");
 
@@ -493,18 +493,20 @@
     modeBtn.addEventListener("click", () => {
         if (currMode === "light") {
             currMode = "dark";
-            body.classList.add("dark");
+            body.classList.add("dark-mode");
             body.classList.remove("light");
             modeBtn.textContent = "Turn On Light Mode";
         } else {
             currMode = "light";
             body.classList.add("light");
-            body.classList.remove("dark");
+            body.classList.remove("dark-mode");
             modeBtn.textContent = "Turn On Dark Mode";
         }
         console.log(currMode);
     });
 });
+
+
      </script>
 
 <!-- for bg animation -->

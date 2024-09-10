@@ -18,46 +18,134 @@ body {
 }
 
 
-/* Dark Mode Styling */
-body.dark {
-    background-color: black;
+/* Resume Section - Dark Mode */
+body.dark-mode #resume {
+    background-color: #1f1f1f;
+}
+
+body.dark-mode h2 {
+    color: #f1f1f1 ;
+}
+body.dark-mode h4 {
+    color: #f1f1f1 ;
+}
+body.dark-mode p{
+    color: #f1f1f1;
+}
+
+body.dark-mode .download {
+    background-color: #527cec;
     color: white;
 }
 
-body.dark footer,
-body.dark #skills,
-body.dark .card,
-body.dark .contact-info ul li,
-body.dark .social-links a {
-    background-color: #1e1e1e;
-    color: #ffffff;
+body.dark-mode .download:hover {
+    background-color: #82aaff;
+    color: #fff;
 }
 
-body.dark .skill-bar .skill-per {
-    background-color: #ffffff;
+/* Skills Section - Dark Mode */
+body.dark-mode #skills {
+    background-color: #1f1f1f;
 }
 
-/* Light Mode Styling */
-body.light {
-    background-color: white;
-    color: black;
+body.dark-mode .skill-name {
+    color: #f1f1f1;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+body.dark-mode .skill-bar {
+    background: #333;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+body.dark-mode .skill-per {
+    background: #d13639;
 }
 
-h1, h6 {
-    margin: 0;
+/* Portfolio Section - Dark Mode */
+body.dark-mode .portfolio {
+    background-color: #1f1f1f;
 }
 
+body.dark-mode .section-header h2 {
+    color: #f1f1f1;
+}
+
+body.dark-mode .portfolio-info {
+    background: #282828;
+    color: #e0e0e0;
+}
+
+body.dark-mode .portfolio-info h3 {
+    color: #f1f1f1;
+}
+
+body.dark-mode .portfolio-info p {
+    color: #999;
+}
+
+body.dark-mode .portfolio-img .overlay {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode .portfolio-img .link-preview,
+body.dark-mode .portfolio-img .link-details {
+    background: #527cec;
+    color: #fff;
+}
+
+body.dark-mode .portfolio-img .link-preview:hover,
+body.dark-mode .portfolio-img .link-details:hover {
+    background: #82aaff;
+    color: #fff;
+}
+
+/* Contact Section - Dark Mode */
+body.dark-mode #contact {
+    background-color: #1f1f1f;
+    color: #f1f1f1;
+}
+body.dark-mode h2{
+    background-color: #1f1f1f;
+    color: #f1f1f1;
+}
+
+body.dark-mode #contact form input,
+body.dark-mode #contact form textarea {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+}
+
+body.dark-mode .submit-message {
+    background-color: #527cec;
+    border-color: #82aaff;
+}
+
+/* Footer - Dark Mode */
+body.dark-mode footer {
+    background-color: #1f1f1f;
+}
+
+body.dark-mode footer a {
+    color: #e0e0e0;
+}
+body.dark-mode li{
+    color: #f1f1f1;
+
+}
+body.dark-mode footer a:hover {
+    color: #82aaff;
+}
+
+body.dark-mode footer ul#social a {
+    color: #e0e0e0;
+}
+
+body.dark-mode footer ul#social a:hover {
+    color: #82aaff;
+}
+
+body.dark-mode footer p {
+    color: #e0e0e0;
+}
 /* Scrollbar styles */
 ::-webkit-scrollbar {
     width: 10px;
@@ -432,6 +520,16 @@ h6 {
         width: 100%;
     }
 }
+@media (max-width: 600px) {
+    #skills {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .skills {
+        padding: 20px 10px;
+    }
+}
+
 
 /* Portfolio section */
 .portfolio {
@@ -625,6 +723,16 @@ footer ul#social {
     text-align: center;
     padding: 0;
 }
+#footer span {
+    color: yellow;
+    animation: colorful 6s infinite;
+}
+
+@keyframes colorful {
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
 
 footer ul#social li {
     display: inline-block;
@@ -659,6 +767,15 @@ footer p {
 
     footer p {
         text-align: center;
+    }
+}
+@media (max-width: 480px) {
+    footer ul#social li {
+        display: block;
+        margin: 10px 0;
+    }
+    footer ul#social a {
+        font-size: 1.5rem;
     }
 }
 
